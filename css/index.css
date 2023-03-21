@@ -8,18 +8,23 @@ body{
 }
 
 header{
-	background-color: #2ff595;
+	background-color: #333;
 	height: 3em;
 	color: #FFF;
 	margin-bottom: 1em;
- 
 }
 
+header h1{
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;
+}
 header h2{
 	font-size: 2em;
 	display:inline-block;
 	vertical-align:	middle;
 }
+
 header .container:before{
 	content: '';
 	display:inline-block;
@@ -27,12 +32,16 @@ header .container:before{
 	vertical-align:	middle;
 }
 
-.tabela{
-	width: 80%;
+.container{
+	width: 60%;
 	height: 100%;
 	margin: 0 auto;
 }
 
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
 
 section h2{
 	font-size: 3em;
@@ -40,7 +49,6 @@ section h2{
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
-	text-align: center;
 }
 
 table{
@@ -51,16 +59,19 @@ table{
 }
 
 td, th {
-
 	padding: .7em;
 	margin: 0;
 	border: 1px solid #ccc;
-   
+	text-align: center;
+}
 
+th{
+	font-weight: bold;
+	background-color: #EEE;
 }
 
 label{
-	color: #000000;
+	color: #555;
 	display: block;
 	margin-bottom: .2em;
 }
@@ -74,29 +85,61 @@ label{
 	width: 100%;
 }
 
+.campo-medio{
+	display: inline-block;
+	padding-right: .5em;
+}
+
 .grupo{
 	width: 32%;
 	display: inline-block;
 	padding: 10px 0px;
 }
 
-.adicionar-cliente{
-    margin-top: 30px;
+button{
+	padding: .5em 2em;
+	border: 0;
+	border-bottom: 3px solid;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 0;
+	margin-top: -3px;
+	color: #fff;
+	background-color:#0c8cd3;
+	border-color: #04324c;
+	width: 20%;
+    display: block;
+    clear: both;
+    margin: 10px 0px;
+
 }
 
+button:active{
+	margin-top:0px;
+	border: 0;
+}
+
+button[disabled=disabled], button:disabled {
+    background-color: gray;
+	border-color: darkgray;
+
+}
+
+.adicionar-paciente{
+    margin-top: 30px;
+}
 
 .campo-invalido{
 	border: 1px solid red;
 }
 
-.cliente-invalido {
+.paciente-invalido {
 	background-color: lightcoral;
 }
 
-#mensagem-erro {
-	color: rgb(0, 255, 76);
+#mensagens-erro {
+	color: red;
 }
-
 
 .fadeOut {
 	opacity: 0;
